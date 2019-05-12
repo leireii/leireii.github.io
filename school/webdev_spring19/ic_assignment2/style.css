@@ -1,0 +1,79 @@
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fbfad3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c6e377;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #36622b;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fbfad3;
+  text-align: center;
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+}
+
+nav li {
+  display: inline;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+nav a {
+  transition: font-weight 1s ease;
+  text-decoration: none;
+  color: #36622b;
+}
+
+nav a:hover {
+  font-weight: bolder;
+  background-color: #c6e377;
+  transition: background-color .5s ease;
+  border-radius: 25px;
+}
+
+/* IMG */
+img {
+  margin-left: 500px;
+}
+
+/* HOME */
+#home {
+  background-color: #c6e377;
+  height: auto;
+}
+
+/* ABOUT */
+#about {
+  background-color: #729d39;
+  height: auto;
+}
+
+/* RESUME */
+#resume {
+  background-color: #36622b;
+  height: auto;
+}
+
+/* CONTACT */
+#contact {
+  background-color: #1F3718;
+  height: auto;
+}
+
+#contact img {
+  margin-left: 170px;
+}

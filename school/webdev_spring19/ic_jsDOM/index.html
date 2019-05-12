@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JS DOM</title>
+
+    <style>
+      body {
+        text-align: center;
+        font-family: sans-serif;
+      }
+      div {
+        border-radius: 25px;
+        margin: 20px;
+        border: 2px solid pink;
+      }
+      h1 {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="first" onmouseover="show(getElementsByTagName('h1').length)">
+      <h1>1</h1>
+      <h1>2</h1>
+      <h1>3</h1>
+    </div>
+    <div id="second" onmouseover="show(getElementsByTagName('h1').length)">
+      <h1>4</h1>
+      <h1>5</h1>
+      <h1>6</h1>
+      <h1>7</h1>
+      <h1>8</h1>
+      <h1>9</h1>
+      <h1>10</h1>
+    </div>
+    <button onclick="total()">How many h1s?</button>
+    <button onclick="firstAmount()">How many in the first div?</button>
+    <button onclick="secondAmount()">How many in the second div?</button>
+    <h2>Hover Numbers:</h2>
+    <div id="display" style="padding: 20px">
+
+    </div>
+
+  <script src="script.js"></script>
+  </body>
+</html>

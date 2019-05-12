@@ -1,0 +1,47 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 50px;
+  font-family: sans-serif;
+}
+
+#container {
+  display: grid;
+  width: 99%;
+  grid-gap: 10px;
+  grid-template-areas:
+  "aside row1 row1 row1"
+  "aside row2 row2 row2";
+  padding: 10px;
+}
+
+#row1 {
+  grid-area: row1;
+  height: auto;
+  width: 100%;
+  padding-top: 50px;
+}
+
+#row2 {
+  grid-area: row2;
+  padding-top: 50px;
+  height: auto;
+  width: 100%;
+}
+
+aside {
+  grid-area: aside;
+  width: 100%;
+}
+
+img {
+  border-radius: 25px;
+}
+
+aside img {
+  width: 100%;
+}
