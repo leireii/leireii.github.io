@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+body {
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+.top-nav {
+  padding: 10px;
+  background-color: black;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.top-nav a:hover {
+  color: gray;
+}
+
+.warning-footer {
+  background-color: red;
+  width: 100%;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+h1 {
+  position: absolute;
+  top: 50vh;
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-size: 100px;
+  font-weight: bolder;
+  width: 100%;
+}
+
+h2 {
+  letter-spacing: 5px;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, .8);
+  padding: 20px;
+  color: white;
+}
+
+#thefungus {
+  background-image: url('https://thumbs.gfycat.com/NaiveSoupyDwarfmongoose-size_restricted.gif'); 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  border-bottom: 5px solid black;
+}
+
+#infection {
+  background-image: url('https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/A-Corbis-DWF15-1022301_1_sdpxw9.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 5px solid black;
+}
+
+.content p {
+  font-size: 20px;
+  text-align: left;
+}
+
+.inner-content {
+  padding: 10px;
+  width: 50%;
+  background: rgba(0,0,0,.8);
+}
+
+.society {
+  height: 600px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.society p {
+  background-color: black;
+  padding: 10px;
+}
+
+h3 {
+  font-size: 40px;
+}
+#suggestions p {
+  text-align: center;
+}
+#suggestions img {
+  width: 500px;
+}
