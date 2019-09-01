@@ -1,0 +1,101 @@
+#navbar {
+    width: 175px;
+    /* position: fixed; */
+    position: sticky;
+    height: 100vh;
+    background-color: #15A2E6;
+    color: #fff;
+    transition: all 0.3s;
+    padding-top: 20px;
+}
+
+#navbar a {
+    color: white;
+    margin-bottom: 10px;
+}
+
+#navbar img {
+    width: 125px;
+}
+
+#navbar a:hover {
+    text-decoration: none;
+}
+
+#navbar.active {
+    margin-left: -175px;
+}
+
+#navbar ul li a {
+    font-size: 1.1em;
+    background-color: #15A2E6;
+}
+
+#navbar ul li {
+    background-color: #15A2E6;
+}
+
+#navbar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background-color: #15A2E6;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 20px;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+#collapseButton {
+    /* display: none; */
+    position: fixed;
+    background-color: white;
+    color: #15A2E6;
+    border:none;
+    border-radius: 25px;
+    top: 20px;
+    left: 175px;
+    padding: -5px;
+    font-size: 20px;
+    z-index: 1;
+    transition: left .3s ease;
+}
+
+#collapseButton.active {
+    left: 20px;
+}
+
+#leftarrow.active {
+    left: 20px;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        margin-left: -175px;
+    }
+    #navbar.active {
+        margin-left: 0;
+    }
+    #collapseButton.active {
+        left: 150px;
+    }
+    #collapseButton {
+        left: 5px;
+    }
+    #leftarrow {
+        left: 5px;
+        opacity:.5;
+    }
+    #rightarrow {
+        opacity:.5;
+    }
+    #leftarrow:hover {
+        opacity:.7;
+    }
+    #leftarrow.active {
+        left: 125px;
+        opacity:.5;
+    }
+}

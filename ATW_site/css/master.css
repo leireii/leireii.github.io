@@ -1,0 +1,235 @@
+/*
+colors:
+UN BLUE - 15A2E6
+
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: width .5s ease;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif !important;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+#un-logo:hover {
+    opacity: .8;
+}
+
+.top-banner {
+    padding-right: 20px;
+    background-color: white;
+    width: 100%;
+}
+
+.top-banner h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: #15A2E6;
+}
+
+
+#motto {
+    color: silver;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.unit-menu {
+    width: 200px;
+    position: fixed;
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    text-align: center;
+    z-index: 999;
+    background: #15A2E6;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.unit-menu .sidebar-header {
+    padding: 20px;
+}
+
+.unit-menu a {
+    color: white;
+    text-align: left;
+    transition: background-color .3s ease;
+    font-size: 16px;
+}
+.unit-menu a:hover {
+    background-color: rgb(4, 107, 158);
+}
+
+.unit-menu a.active {
+    color: white;
+}
+
+.unit-menu ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+.unit-menu ul li a {
+    padding: 5px;
+    padding-left: 20px;
+    font-size: 1.1em;
+    display: block;
+}
+
+.unit-menu ul li a:hover {
+    background-color: rgb(4, 107, 158);
+    color: white;
+    text-decoration: none;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 14px !important;
+    padding-left: 30px !important;
+    text-align: left;
+    background-color: rgb(4, 107, 158);
+    height: 35px;   
+}
+ul ul a:hover {
+    font-style: italic;
+}
+
+/* EXTRA DIVS */
+.yellowbg {
+    padding: 20px; 
+    width: 100%; 
+    background-color: rgb(255, 253, 221);
+}
+
+.bluebg {
+    width: 100%;
+    background-color: rgb(236, 249, 255);
+}
+
+@media only print {
+    /* CROSSWORD */
+    .crossword-button {
+        display: none;
+    }
+    .FuncButton {
+        display: none;
+    }
+    #InstructionsDiv {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+    .unit-menu {
+        display: none;
+    }
+    .unit-content {
+        padding: none;
+    }
+  }
+
+
+.vocab {
+    border-bottom: 2px solid #15A2E6;
+    color: black;
+    font-weight: bold;
+}
+
+.vocab:hover {
+    text-decoration: none;
+    background-color: rgba(21, 160, 230, 0.1);
+    color: #15A2E6;
+}
+
+.container-fluid {
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* .points .col-sm-6 {
+    background-color: silver;
+} */
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.points {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.points p {
+    margin: 0 auto;
+    padding-bottom: 10px;
+    width: 80%;
+}
+
+.points img {
+    margin: 30px;
+    width: 150px;
+}
+
+#blue {
+    background-color: #15A2E6;
+    height: auto;
+    color: white;
+    padding: 30px;
+}
+
+#blue .row h2 {
+    font-weight: bold;
+}
+
+#tips h2 {
+    color: #15A2E6;
+    font-weight: bold;
+}
+
+#tips p {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+#tips .col-lg-6 {
+    padding: 20px;
+}
+
+#tips .col-lg-6 h2 {
+    color: #15A2E6;
+    font-weight: bold;
+}
+
+#lessons {
+    background-color: #15A2E6;
+    height: 100vh;
+    color: white;
+}

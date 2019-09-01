@@ -1,0 +1,281 @@
+
+
+.container-fluid {
+    padding: 0;
+    align-items: stretch;
+    display: flex;
+    height: auto;
+    width: 100%;
+}
+
+.unit-content {
+    background-color: white;
+    width: 100%;
+    padding-left: 200px;
+    padding-top: 0;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.unit-content h1 {    
+    font-family: 'Open Sans';
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.unit-content h2 {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+
+.unit-content p {
+    font-size: 14px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.unit-content div {
+    padding-top: 20px;
+}
+
+#unit-title {
+    font-family: 'Open Sans';
+    margin: 0 auto;
+    padding-bottom: 10px;
+    letter-spacing: 3px;
+    font-style: italic;
+    width: 80%;
+    border-bottom: 2px solid rgb(239, 250, 255);
+    margin-bottom: 20px;
+}
+
+#rightarrow {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    width: 50px;
+}
+
+#leftarrow {
+    transform: rotate(180deg);
+    position: fixed;
+    left: 210px;
+    top: 50%;
+    width: 50px;
+    transition: left .5s ease;
+}
+
+#rightarrow:hover,
+#leftarrow:hover {
+    opacity: .6;
+}
+
+.sentence-box {
+    text-align: left;
+    padding: 20px;
+    margin: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 40px;
+    background-color: rgb(236, 249, 255);
+}
+
+.tile-link {
+    color: white;
+    font-weight: bold;
+}
+
+.tile-link:hover {
+    color: white;
+}
+
+a {
+    color: #15A2E6;
+}
+
+a:hover {
+    color: #15A2E6;
+}
+
+#vocab {
+    background-color: rgb(255, 253, 221);
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#vocab ul {
+    text-align: left;
+    list-style: none;
+    ;
+}
+
+.letter-box {
+    text-align: left;
+    padding: 20px;
+    margin: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 40px;
+    background-color: rgb(236, 249, 255);
+}
+
+.letter-box p {
+    font-size: 17px;
+}
+
+textarea {
+    text-align: left;
+    height: 300px;
+    padding: 10px;
+    width: 100%;
+}
+
+table {
+    background-color: rgb(236, 249, 255);
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+th,
+td {
+    padding: 10px;
+    border-left: 1px solid #15A2E6;
+    border-right: 1px solid #15A2E6;
+}
+
+.sentence-box input {
+    width: 150px;
+    padding-left: 5px;
+}
+
+.sentence-box button {
+    border: 1px solid #15A2E6;
+    background-color: white;
+    color: #15A2E6;
+}
+
+h4 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.printable {
+    width: 100%;
+    border: 2px solid #15A2E6;
+}
+
+.download-box {
+    background-color: #15A2E6;
+    width: 200px;
+    margin: 0 auto;
+    color: white;
+    border-color: rgb(16, 121, 173);
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.download-box:active {
+    background-color: rgb(16, 121, 173);
+}
+
+#units-list {
+    /* background-color: rgba(21, 160, 230, 0.1); */
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#lessons-page-content {
+    width: 100%;
+    /* background-color: #15A2E6; */
+    color: #15A2E6;
+}
+
+.lesson-tile {
+    margin: 0 auto;
+    background-color: #15A2E6;
+    transition: background-color .5s ease;
+    margin-top: 40px;
+    overflow: hidden;
+    height: 200px;
+    padding: 0;
+}
+
+.lesson-tile a {
+    color: white;
+}
+
+.lesson-tile img {
+    width: 100%;
+}
+
+.lesson-overlay {
+    height: 100%;
+    transition: 1s ease;
+    position: absolute;
+    top: 167px;
+    width: 100%;
+    text-align: center;
+}
+
+.lesson-overlay h3 {
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    background-color: #15A2E6;
+}
+
+.lesson-tile:hover .lesson-overlay {
+    top: 0px;
+    background-color: #15A2E6;
+}
+
+.lesson-tile:hover img {
+    opacity: .6;
+}
+
+.lesson-tile li {
+    list-style: none;
+}
+
+@media only screen and (max-width: 750px) {
+    .unit-content {
+        padding-left: 0px;
+        padding-top: 50px;
+    }
+    #rightarrow, #leftarrow {
+        position: fixed;
+        bottom: 0px;
+        z-index: 2;
+    }
+    #leftarrow {
+        left: 10px;
+    }
+  }
+
+
+@media only print {
+    .unit-content {
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    #rightarrow, #leftarrow {
+        display: none;
+    }
+
+    .unit-menu {
+        display: none;
+    }
+
+    .unit-content p {
+        width: 95%;
+        line-height: 25px;
+    }
+}
+
