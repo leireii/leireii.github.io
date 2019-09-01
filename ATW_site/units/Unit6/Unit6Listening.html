@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Unit 6 - Listening</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/master.css">
+    <link rel="stylesheet" href="../../css/units.css">
+    <link rel="stylesheet" href="../../css/truefalse.css">
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+        <nav class="unit-menu">
+            <div class="sidebar-header">
+                <img src="https://www.un.org/development/desa/capacity-development/wp-content/uploads/sites/66/2017/10/un-logo-white.png"
+                    style="width: 125px;">
+            </div>
+
+            <ul class="list-unstyled components">
+                <p style="color: white; padding: 3px;"><b>Action Through Words</b></p>
+                <li>
+                    <a href="../../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../../index.html#about">About</a>
+                </li>
+                <li>
+                    <a href="../../lessons.html">Units</a>
+                </li>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Resources</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="../../games.html">Games</a>
+                        </li>
+                        <li>
+                            <a href="../../writerschecklist.html">Writer's Checklist</a>
+                        </li>
+                        <li>
+                            <a href="../../extralinks.html">Extra Links</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">This
+                        Unit</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="Unit6.html">Introduction</a>
+                        </li>
+                        <li>
+                            <a href="Unit6Reading.html">Reading</a>
+                        </li>
+                        <li>
+                            <a href="Unit6Grammar.html">Grammar</a>
+                        </li>
+                        <li>
+                            <a href="Unit6Writing.html">Writing</a>
+                        </li>
+                        <li>
+                            <a href="Unit6Listening.html">Listening</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+        <div class="unit-content">
+            <div class="yellowbg">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h1 style="color: black; margin-top: -30px;">Unit 6</h1>
+                        <h2 style="margin-top: -20px;">Listening</h2>
+                    </div>
+                    <div class="col-lg-9">
+                        <i class="material-icons" style="font-size: 75px; margin-top: -40px">headset_mic</i>
+
+                        <h3>
+                            <b>UN Decade for Literacy</b>
+                        </h3>
+                    </div>
+
+                </div>
+            </div>
+            <div id="listening">
+                <i class="material-icons" style="text-align: center; font-size: 32px;">face</i>
+                <br><span style="font-size: 16px;">There are individual exercises in this section.</span>
+                <br><br>
+                <h2>Radio Broadcasts</h2>
+                <p>
+                    Listen to the two radio broadcasts below.
+                </p>
+                <div class="row" style="width: 90%; margin: 0 auto">
+                    <div class="col-lg-6">
+                        <h3><b>Broadcast 1</b></h3>
+                        <h4>International Year of Languages 2008</h4>
+                        <br>
+                        <audio controls>
+                            <source src="../../media/Unit6Radio1.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <br>
+                        <a target="_blank" href="../../printables/Unit6Listening1.pdf">Transcript</a>
+                        <br><br>
+                        <p>
+                            This is a UN radio programme about <b>“The Speaking Tables,”</b> an initiative of the
+                            Language and
+                            Communications Programme to celebrate
+                            the <b>UN International Year of Languages</b>. New York Headquarters staff comment
+                            on
+                            the first of the “Speaking Tables” events — which encourage staff to practice a second UN
+                            language during their lunch hour. Javier Zanon, dierector of this initiative, is
+                            interviewed.
+                        </p>
+                    </div>
+                    <br>
+                    <div class="col-lg-6">
+                        <h3><b>Broadcast 2</b></h3>
+                        <h4>UN at 60: Supporting Literacy in Uganda</h4>
+                        <br>
+                        <audio controls>
+                            <source src="../../media/Unit6Radio2.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <br>
+                        <a target="_blank" href="../../printables/Unit6Listening2.pdf">Transcript</a>
+                        <br><br>
+                        <p>
+                            This is a radio broadcast about a visit to a literacy project in a Ugandan village. This
+                            broadcast was part of a programme titled <b>"UN at 60: staff members share their memorable
+                                experiences with the Organization: Supporting Literacy in Uganda."</b> The UN's Pat
+                            Duffy is interviewed.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <!-- QUIZ -->
+                <div id="quiz" class="letter-box" style="text-align: center;">
+                    <i class="material-icons" style="float: left;">face</i>
+                    <h2>
+                        Comprehension Exercise</h2>
+                    <span id="question">hello</span>
+                    <div class="answers">
+                        <button id="true" onclick="checkTrue()">True</button>
+                        <button id="false" onclick="checkFalse()">False</button>
+                    </div>
+                    <h5 id="result">____________</h5>
+                    <button id="next" onclick="nextOne()">Next</button>
+                    <span id="progress"></span>
+                </div>
+                <br>
+                <h2>More than One English</h2>
+                <p>
+                    The link below takes you to a site where you can hear people reading a passage in a variety of
+                    accents of English around the world. You can listen to over <b>600 accents</b>!
+                </p>
+                <br>
+                <a href="http://accent.gmu.edu/browse_language.php?function=find&language=english"><button
+                        class="download-box">
+                        Go to Website
+                    </button></a>
+                <br><br>
+                <p>
+                    They all recite the same passage, shown below:
+                </p>
+                <div style="color: #15A2E6; width: 70%; margin: 0 auto">
+                    <em>
+                        "Please call Stella.
+                        Ask her to bring these things with her from the store: six spoons of fresh snow peas, five thick
+                        slabs of blue cheese, and maybe a snack for her brother, Bob.
+                        We also need a small plastic snake and a big toy frog for the kids.
+                        She can scoop these things into three red bags, and we'll go meet her Wednesday at the train
+                        station."
+                    </em>
+                </div>
+
+            </div>
+
+
+            <div class="top-banner">
+                <div class="row">
+                    <div class="col-sm-6" style="text-align: left; padding-left: 50px;">
+                        <img src="https://www.teachdontpreach.ie/wordpress/wp-content/uploads/2011/01/UNlogo.jpg"
+                            height="100px">
+                    </div>
+                    <div class="col-sm-6" style="text-align: center">
+                        <h1>Action through Words</h1>
+                        <span id="motto">Learning English, Learning About the United Nations</span>
+                    </div>
+                </div>
+            </div>
+            <a href="Unit6Writing.html"><img id="leftarrow" src="../../images/rightarrow.png"></a>
+
+        </div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="../../script.js" charset="utf-8"></script>
+        <script src="Unit6ListeningComp.js"></script>
+</body>
+
+</html>

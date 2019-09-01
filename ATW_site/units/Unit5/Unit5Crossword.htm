@@ -1,0 +1,913 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+	<meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Pat Duffy.">
+	</meta>
+	<meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria">
+	</meta>
+
+	<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+	<meta name="DC:Creator" content="Pat Duffy" />
+	<meta name="DC:Title" content="Unit 5 Vocabulary Crossword" />
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	<title>
+		Unit 5 Vocabulary Crossword
+	</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/master.css">
+
+	<style type="text/css">
+		* html object.MediaPlayerNotForIE {
+			display: none;
+		}
+
+		body {
+			font-family: 'Open Sans', serif;
+			background-color: #ffffff;
+			margin-right: 5%;
+			margin-left: 5%;
+			font-size: 16px;
+		}
+
+		table,
+		div,
+		span,
+		td {
+			font-size: 100%;
+			color: #000000;
+		}
+
+		div.Titles {
+			padding: 0.5em;
+			text-align: center;
+			color: #15A2E6;
+		}
+
+		button {
+			font-family: 'Open Sans', serif;
+			font-size: 100%;
+			display: inline;
+		}
+
+		.ExerciseTitle {
+			font-size: 140%;
+			color: #15A2E6;
+		}
+
+		.ExerciseSubtitle {
+			font-size: 120%;
+			color: #15A2E6;
+		}
+
+		div.StdDiv {
+			background-color: #FFFFFF;
+			text-align: center;
+			font-size: 100%;
+			color: #000000;
+			padding: 0.5em;
+			border: solid 1px #15A2E6;
+			margin-bottom: 1px;
+		}
+
+		/* EndCorePageCSS */
+
+		.RTLText {
+			text-align: right;
+			font-size: 150%;
+			direction: rtl;
+			font-family: 'Open Sans', serif;
+		}
+
+		.CentredRTLText {
+			text-align: center;
+			font-size: 150%;
+			direction: rtl;
+			font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", 'Open Sans', serif;
+		}
+
+		button p.RTLText {
+			text-align: center;
+		}
+
+		.RTLGapBox {
+			text-align: right;
+			font-size: 150%;
+			direction: rtl;
+			font-family: "Times New Roman", 'Open Sans', serif;
+		}
+
+		.Guess {
+			font-weight: bold;
+		}
+
+		.CorrectAnswer {
+			font-weight: bold;
+		}
+
+		div#Timer {
+			padding: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			color: #15A2E6;
+		}
+
+		span#TimerText {
+			padding: 0.25em;
+			border-width: 1px;
+			border-style: solid;
+			font-weight: bold;
+			display: none;
+			color: #15A2E6;
+		}
+
+		span.Instructions {}
+
+		div.ExerciseText {}
+
+		.FeedbackText,
+		.FeedbackText span.CorrectAnswer,
+		.FeedbackText span.Guess,
+		.FeedbackText span.Answer {
+			color: #15A2E6;
+		}
+
+		.LeftItem {
+			font-size: 100%;
+			color: #000000;
+			text-align: left;
+		}
+
+		.RightItem {
+			font-weight: bold;
+			font-size: 100%;
+			color: #000000;
+		}
+
+		span.CorrectMark {}
+
+		input,
+		textarea {
+			font-family: 'Open Sans', serif;
+			font-size: 120%;
+		}
+
+		select {
+			font-size: 100%;
+		}
+
+		div.Feedback {
+			background-color: #ffffff;
+			left: 33%;
+			width: 34%;
+			top: 33%;
+			z-index: 1;
+			border-style: solid;
+			border-width: 1px;
+			padding: 5px;
+			text-align: center;
+			color: #15A2E6;
+			position: absolute;
+			display: none;
+			font-size: 100%;
+		}
+
+
+
+
+		div.ExerciseDiv {
+			color: #000000;
+		}
+
+		/* JMatch flashcard styles */
+		table.FlashcardTable {
+			background-color: transparent;
+			color: #000000;
+			border-color: #000000;
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-top: 2em;
+			margin-bottom: 2em;
+			width: 90%;
+			position: relative;
+			text-align: center;
+			padding: 0px;
+		}
+
+		table.FlashcardTable tr {
+			border-style: none;
+			margin: 0px;
+			padding: 0px;
+			background-color: #FFFFFF;
+		}
+
+		table.FlashcardTable td.Showing {
+			font-size: 140%;
+			text-align: center;
+			width: 50%;
+			display: table-cell;
+			padding: 2em;
+			margin: 0px;
+			border-style: solid;
+			border-width: 1px;
+			color: #000000;
+			background-color: #FFFFFF;
+		}
+
+		table.FlashcardTable td.Hidden {
+			display: none;
+		}
+
+		/* JMix styles */
+		div#SegmentDiv {
+			margin-top: 2em;
+			margin-bottom: 2em;
+			text-align: center;
+		}
+
+		a.ExSegment {
+			font-size: 120%;
+			font-weight: bold;
+			text-decoration: none;
+			color: #000000;
+		}
+
+		span.RemainingWordList {
+			font-style: italic;
+		}
+
+		div.DropLine {
+			position: absolute;
+			text-align: center;
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+			border-bottom-color: #15A2E6;
+			width: 80%;
+		}
+
+		/* JCloze styles */
+
+		.ClozeWordList {
+			text-align: center;
+			font-weight: bold;
+		}
+
+		div.ClozeBody {
+			text-align: left;
+			margin-top: 2em;
+			margin-bottom: 2em;
+			line-height: 2.0
+		}
+
+		span.GapSpan {
+			font-weight: bold;
+		}
+
+		/* JCross styles */
+
+		table.CrosswordGrid {
+			margin: auto auto 1em auto;
+			border-collapse: collapse;
+			padding: 0px;
+			background-color: #000000;
+		}
+
+		table.CrosswordGrid tbody tr td {
+			width: 1.5em;
+			height: 1.5em;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 140%;
+			padding: 1px;
+			margin: 0px;
+			border-style: solid;
+			border-width: 1px;
+			border-color: #000000;
+			color: #000000;
+		}
+
+		table.CrosswordGrid span {
+			color: #000000;
+		}
+
+		table.CrosswordGrid td.BlankCell {
+			background-color: #000000;
+			color: #000000;
+		}
+
+		table.CrosswordGrid td.LetterOnlyCell {
+			text-align: center;
+			vertical-align: middle;
+			background-color: #ffffff;
+			color: #000000;
+			font-weight: bold;
+		}
+
+		table.CrosswordGrid td.NumLetterCell {
+			text-align: left;
+			vertical-align: top;
+			background-color: #ffffff;
+			color: #000000;
+			padding: 1px;
+			font-weight: bold;
+		}
+
+		.NumLetterCellText {
+			cursor: pointer;
+			color: #000000;
+		}
+
+		.GridNum {
+			vertical-align: super;
+			font-size: 66%;
+			font-weight: bold;
+			text-decoration: none;
+			color: #000000;
+		}
+
+		.GridNum:hover,
+		.GridNum:visited {
+			color: #15A2E6;
+		}
+
+		table#Clues {
+			margin: auto;
+			vertical-align: top;
+		}
+
+		table#Clues td {
+			vertical-align: top;
+		}
+
+		table.ClueList {
+			margin: auto;
+		}
+
+		td.ClueNum {
+			text-align: right;
+			font-weight: bold;
+			vertical-align: top;
+		}
+
+		td.Clue {
+			text-align: left;
+		}
+
+		div#ClueEntry {
+			text-align: left;
+			margin-bottom: 1em;
+		}
+
+		/* Keypad styles */
+
+		div.Keypad {
+			text-align: center;
+			display: none;
+			/* initially hidden, shown if needed */
+			margin-bottom: 0.5em;
+		}
+
+		div.Keypad button {
+			font-family: 'Open Sans', serif;
+			font-size: 120%;
+			background-color: #ffffff;
+			color: #000000;
+			width: 2em;
+		}
+
+		/* JQuiz styles */
+
+		div.QuestionNavigation {
+			text-align: center;
+		}
+
+		.QNum {
+			margin: 0em 1em 0.5em 1em;
+			font-weight: bold;
+			vertical-align: middle;
+		}
+
+		textarea {
+			font-family: 'Open Sans', serif;
+		}
+
+		.QuestionText {
+			text-align: left;
+			margin: 0px;
+			font-size: 100%;
+		}
+
+		.Answer {
+			font-size: 120%;
+			letter-spacing: 0.1em;
+		}
+
+		.PartialAnswer {
+			font-size: 120%;
+			letter-spacing: 0.1em;
+			color: #15A2E6;
+		}
+
+		.Highlight {
+			color: #000000;
+			background-color: #ffff00;
+			font-weight: bold;
+			font-size: 120%;
+		}
+
+		ol.QuizQuestions {
+			text-align: left;
+			list-style-type: none;
+		}
+
+		li.QuizQuestion {
+			padding: 1em;
+			border-style: solid;
+			border-width: 0px 0px 1px 0px;
+		}
+
+		ol.MCAnswers {
+			text-align: left;
+			list-style-type: upper-alpha;
+			padding: 1em;
+		}
+
+		ol.MCAnswers li {
+			margin-bottom: 1em;
+		}
+
+		ol.MSelAnswers {
+			text-align: left;
+			list-style-type: lower-alpha;
+			padding: 1em;
+		}
+
+		div.ShortAnswer {
+			padding: 1em;
+		}
+
+		.FuncButton {
+			text-align: center;
+			border-style: solid;
+
+			border-left-color: #ffffff;
+			border-top-color: #ffffff;
+			border-right-color: #7f7f7f;
+			border-bottom-color: #7f7f7f;
+			color: #000000;
+			background-color: #FFFFFF;
+
+			border-width: 2px;
+			padding: 3px 6px 3px 6px;
+			cursor: pointer;
+		}
+
+		.FuncButtonUp {
+			color: #FFFFFF;
+			text-align: center;
+			border-style: solid;
+
+			border-left-color: #ffffff;
+			border-top-color: #ffffff;
+			border-right-color: #7f7f7f;
+			border-bottom-color: #7f7f7f;
+
+			background-color: #000000;
+			color: #FFFFFF;
+			border-width: 2px;
+			padding: 3px 6px 3px 6px;
+			cursor: pointer;
+		}
+
+		.FuncButtonDown {
+			color: #FFFFFF;
+			text-align: center;
+			border-style: solid;
+
+			border-left-color: #7f7f7f;
+			border-top-color: #7f7f7f;
+			border-right-color: #ffffff;
+			border-bottom-color: #ffffff;
+			background-color: #000000;
+			color: #FFFFFF;
+
+			border-width: 2px;
+			padding: 3px 6px 3px 6px;
+			cursor: pointer;
+		}
+
+		/*BeginNavBarStyle*/
+
+		div.NavButtonBar {
+			background-color: #000000;
+			text-align: center;
+			margin: 2px 0px 2px 0px;
+			clear: both;
+			font-size: 100%;
+		}
+
+		.NavButton {
+			border-style: solid;
+
+			border-left-color: #7f7f7f;
+			border-top-color: #7f7f7f;
+			border-right-color: #000000;
+			border-bottom-color: #000000;
+			background-color: #000000;
+			color: #ffffff;
+
+			border-width: 2px;
+			cursor: pointer;
+		}
+
+		.NavButtonUp {
+			border-style: solid;
+
+			border-left-color: #7f7f7f;
+			border-top-color: #7f7f7f;
+			border-right-color: #000000;
+			border-bottom-color: #000000;
+			color: #000000;
+			background-color: #ffffff;
+
+			border-width: 2px;
+			cursor: pointer;
+		}
+
+		.NavButtonDown {
+			border-style: solid;
+
+			border-left-color: #000000;
+			border-top-color: #000000;
+			border-right-color: #7f7f7f;
+			border-bottom-color: #7f7f7f;
+			color: #000000;
+			background-color: #ffffff;
+
+			border-width: 2px;
+			cursor: pointer;
+		}
+
+		/*EndNavBarStyle*/
+
+		a {
+			color: #15A2E6;
+		}
+
+		a:visited {
+			color: 15A2E6;
+		}
+
+		a:hover {
+			color: #15A2E6;
+		}
+
+		div.CardStyle {
+			position: absolute;
+			font-family: 'Open Sans', serif;
+			font-size: 100%;
+			padding: 5px;
+			border-style: solid;
+			border-width: 1px;
+			color: #000000;
+			background-color: #FFFFFF;
+			left: -50px;
+			top: -50px;
+			overflow: visible;
+		}
+
+		.rtl {
+			text-align: right;
+			font-size: 140%;
+		}
+	</style>
+
+
+
+	<script src="Unit5Crossword.js" type="text/javascript"></script>
+</head>
+
+<body onload="StartUp()" id="TheBody">
+	<br>
+	<div class="top-banner">
+		<div class="row">
+			<div class="col-sm-6" style="text-align: left;">
+				<img src="https://www.teachdontpreach.ie/wordpress/wp-content/uploads/2011/01/UNlogo.jpg"
+					height="100px">
+			</div>
+			<div class="col-sm-6" style="text-align: center">
+				<h1>Action through Words</h1>
+				<span id="motto">Learning English, Learning About the United Nations</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="Titles">
+		<h1>Unit 5 Vocabulary Crossword</h1>
+		<h2 class="ExerciseTitle"></h2>
+	</div>
+
+
+	<div id="InstructionsDiv" class="StdDiv">
+		<div id="Instructions">Complete the crossword, then click on "Check" to check your answer. If you are stuck, you
+			can click on "Hint" to get a free letter. Click on a number in the grid to see the clue or clues for that
+			number.</div>
+	</div>
+
+
+
+	<div id="MainDiv" class="StdDiv">
+
+
+
+		<div id="ClueEntry">
+
+		</div>
+
+		<!-- This top button is hidden; uncomment it to reveal it. -->
+		<!--
+<button id="CheckButton1" class="FuncButton" onmouseover="FuncBtnOver(this)" onfocus="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onblur="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" onclick="CheckAnswers()">&nbsp;Check&nbsp;</button>
+
+ -->
+
+		<table class="CrosswordGrid">
+			<tbody>
+
+				<tr id="Row_0">
+					<td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum"
+							onclick="ShowClue(1,0,0)">1</a><span class="NumLetterCellText" id="L_0_0"
+							onclick="ShowClue(1,0,0)">&nbsp;&nbsp;&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_0_1">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_0_2">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_0_3">&nbsp;</span></td>
+					<td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum"
+							onclick="ShowClue(2,0,4)">2</a><span class="NumLetterCellText" id="L_0_4"
+							onclick="ShowClue(2,0,4)">&nbsp;&nbsp;&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_0_5">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_0_6">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_0_7">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_0_8">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_0_9">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_0_10">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_0_11">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_0_12">&nbsp;</span></td>
+				</tr>
+				<tr id="Row_1">
+					<td class="LetterOnlyCell"><span id="L_1_0">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="LetterOnlyCell"><span id="L_1_4">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+				</tr>
+				<tr id="Row_2">
+					<td class="LetterOnlyCell"><span id="L_2_0">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum"
+							onclick="ShowClue(3,2,4)">3</a><span class="NumLetterCellText" id="L_2_4"
+							onclick="ShowClue(3,2,4)">&nbsp;&nbsp;&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_2_5">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_2_6">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_2_7">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_2_8">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_2_9">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_2_10">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_2_11">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+				</tr>
+				<tr id="Row_3">
+					<td class="LetterOnlyCell"><span id="L_3_0">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="LetterOnlyCell"><span id="L_3_4">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+				</tr>
+				<tr id="Row_4">
+					<td class="LetterOnlyCell"><span id="L_4_0">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum"
+							onclick="ShowClue(4,4,3)">4</a><span class="NumLetterCellText" id="L_4_3"
+							onclick="ShowClue(4,4,3)">&nbsp;&nbsp;&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_4_4">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_4_5">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_4_6">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_4_7">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_4_8">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_4_9">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_4_10">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+				</tr>
+				<tr id="Row_5">
+					<td class="LetterOnlyCell"><span id="L_5_0">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="LetterOnlyCell"><span id="L_5_4">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+				</tr>
+				<tr id="Row_6">
+					<td class="LetterOnlyCell"><span id="L_6_0">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum"
+							onclick="ShowClue(5,6,4)">5</a><span class="NumLetterCellText" id="L_6_4"
+							onclick="ShowClue(5,6,4)">&nbsp;&nbsp;&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_6_5">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_6_6">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_6_7">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_6_8">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_6_9">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_6_10">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+				</tr>
+				<tr id="Row_7">
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="LetterOnlyCell"><span id="L_7_4">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+				</tr>
+				<tr id="Row_8">
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum"
+							onclick="ShowClue(6,8,4)">6</a><span class="NumLetterCellText" id="L_8_4"
+							onclick="ShowClue(6,8,4)">&nbsp;&nbsp;&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_8_5">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_8_6">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_8_7">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_8_8">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_8_9">&nbsp;</span></td>
+					<td class="LetterOnlyCell"><span id="L_8_10">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+				</tr>
+				<tr id="Row_9">
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="LetterOnlyCell"><span id="L_9_4">&nbsp;</span></td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+					<td class="BlankCell">&nbsp;</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+		<button id="CheckButton2" class="FuncButton" onmouseover="FuncBtnOver(this)" onfocus="FuncBtnOver(this)"
+			onmouseout="FuncBtnOut(this)" onblur="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)"
+			onmouseup="FuncBtnOut(this)" onclick="CheckAnswers()">&nbsp;Check&nbsp;</button>
+
+		<table id="Clues">
+			<tbody>
+				<tr>
+					<td>
+
+						<table class="ClueList">
+							<tbody id="CluesAcross">
+								<tr>
+									<td colspan="2">
+										<h3 class="ExerciseSubtitle" id="CluesAcrossLabel">Across:</h3>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="ClueNum">1. </td>
+									<td id="Clue_A_1" class="Clue">Pre-requisite; condition necessary to achieve goal
+									</td>
+								</tr>
+								<tr>
+									<td class="ClueNum">3. </td>
+									<td id="Clue_A_3" class="Clue">Sufficient; satisfactory in quantity or quality</td>
+								</tr>
+								<tr>
+									<td class="ClueNum">4. </td>
+									<td id="Clue_A_4" class="Clue">A person who eliminates land mines</td>
+								</tr>
+								<tr>
+									<td class="ClueNum">5. </td>
+									<td id="Clue_A_5" class="Clue">Small united group within a larger one, especially in
+										politics</td>
+								</tr>
+								<tr>
+									<td class="ClueNum">6. </td>
+									<td id="Clue_A_6" class="Clue">Bring something back to its former condition</td>
+								</tr>
+
+							</tbody>
+						</table>
+
+					</td>
+
+					<td>
+
+						<table class="ClueList">
+							<tbody id="CluesDown">
+								<tr>
+									<td colspan="2">
+										<h3 class="ExerciseSubtitle" id="CluesDownLabel">Down:</h3>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="ClueNum">1. </td>
+									<td id="Clue_D_1" class="Clue">Exist or happen generally; be widespread</td>
+								</tr>
+								<tr>
+									<td class="ClueNum">2. </td>
+									<td id="Clue_D_2" class="Clue">Agreement to stop firing guns in war</td>
+								</tr>
+
+							</tbody>
+						</table>
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+	<a href="Unit5Reading.html">
+		<button class="crossword-button"
+			style="width: 100%; background-color:#15A2E6; color: white; border-color: #15A2E6">
+			<h2 style="text-align: center;">
+				<icon class="material-icons">arrow_back</icon> Return to Unit 5
+			</h2>
+		</button>
+	</a>
+	<a href="../../index.html">
+		<button class="crossword-button"
+			style="width: 100%; background-color:#15A2E6; color: white; border-color: #15A2E6">
+			<h2 style="text-align: center;">
+				<icon class="material-icons">home</icon> Return to Homepage
+			</h2>
+		</button>
+	</a>
+	<br><br>
+
+
+	<div class="Feedback" id="FeedbackDiv">
+		<div class="FeedbackText" id="FeedbackContent"></div>
+		<button id="FeedbackOKButton" class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+			onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)"
+			onmouseup="FuncBtnOut(this)" onclick="HideFeedback(); return false;">&nbsp;OK&nbsp;</button>
+	</div>
+
+
+
+</body>
+
+</html>
