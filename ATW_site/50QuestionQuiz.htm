@@ -1,0 +1,1955 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+	<meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Pat Duffy.">
+	</meta>
+	<meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria">
+	</meta>
+
+	<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+	<meta name="DC:Creator" content="Pat Duffy" />
+	<meta name="DC:Title" content="The Work of the UN: 50-Question Quiz" />
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	<title>
+		The Work of the UN: 50-Question Quiz
+	</title>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/master.css">
+
+	<style type="text/css">
+		* html object.MediaPlayerNotForIE {
+			display: none;
+		}
+
+		body {
+			font-family: 'Open Sans', serif;
+			background-color: #ffffff;
+			margin-right: 5%;
+			margin-left: 5%;
+			font-size: 16px;
+		}
+
+		table,
+		div,
+		span,
+		td {
+			font-size: 100%;
+			color: #000000;
+		}
+
+		div.Titles {
+			padding: 0.5em;
+			text-align: center;
+			color: #15A2E6;
+		}
+
+		button {
+			font-family: 'Open Sans', serif;
+			font-size: 100%;
+			display: inline;
+		}
+
+		.ExerciseTitle {
+			font-size: 140%;
+			color: #15A2E6;
+		}
+
+		.ExerciseSubtitle {
+			font-size: 120%;
+			color: #15A2E6;
+		}
+
+		div.StdDiv {
+			background-color: #FFFFFF;
+			text-align: center;
+			font-size: 100%;
+			color: #000000;
+			padding: 0.5em;
+			border: solid 1px #15A2E6;
+			margin-bottom: 1px;
+		}
+
+		/* EndCorePageCSS */
+
+		.RTLText {
+			text-align: right;
+			font-size: 150%;
+			direction: rtl;
+			font-family: 'Open Sans', serif;
+		}
+
+		.CentredRTLText {
+			text-align: center;
+			font-size: 150%;
+			direction: rtl;
+			font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", 'Open Sans', serif;
+		}
+
+		button p.RTLText {
+			text-align: center;
+		}
+
+		.RTLGapBox {
+			text-align: right;
+			font-size: 150%;
+			direction: rtl;
+			font-family: "Times New Roman", 'Open Sans', serif;
+		}
+
+		.Guess {
+			font-weight: bold;
+		}
+
+		.CorrectAnswer {
+			font-weight: bold;
+		}
+
+		div#Timer {
+			padding: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			color: #15A2E6;
+		}
+
+		span#TimerText {
+			padding: 0.25em;
+			border-width: 1px;
+			border-style: solid;
+			font-weight: bold;
+			display: none;
+			color: #15A2E6;
+		}
+
+		span.Instructions {}
+
+		div.ExerciseText {}
+
+		.FeedbackText,
+		.FeedbackText span.CorrectAnswer,
+		.FeedbackText span.Guess,
+		.FeedbackText span.Answer {
+			color: #15A2E6;
+		}
+
+		.LeftItem {
+			font-size: 100%;
+			color: #000000;
+			text-align: left;
+		}
+
+		.RightItem {
+			font-weight: bold;
+			font-size: 100%;
+			color: #000000;
+		}
+
+		span.CorrectMark {}
+
+		input,
+		textarea {
+			font-family: 'Open Sans', serif;
+			font-size: 120%;
+		}
+
+		select {
+			font-size: 100%;
+		}
+
+		div.Feedback {
+			background-color: #ffffff;
+			left: 33%;
+			width: 34%;
+			top: 33%;
+			z-index: 1;
+			border-style: solid;
+			border-width: 1px;
+			padding: 5px;
+			text-align: center;
+			color: #15A2E6;
+			position: absolute;
+			display: none;
+			font-size: 100%;
+		}
+
+
+
+
+		div.ExerciseDiv {
+			color: #000000;
+		}
+
+		/* JMatch flashcard styles */
+		table.FlashcardTable {
+			background-color: transparent;
+			color: #000000;
+			border-color: #000000;
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-top: 2em;
+			margin-bottom: 2em;
+			width: 90%;
+			position: relative;
+			text-align: center;
+			padding: 0px;
+		}
+
+		table.FlashcardTable tr {
+			border-style: none;
+			margin: 0px;
+			padding: 0px;
+			background-color: #FFFFFF;
+		}
+
+		table.FlashcardTable td.Showing {
+			font-size: 140%;
+			text-align: center;
+			width: 50%;
+			display: table-cell;
+			padding: 2em;
+			margin: 0px;
+			border-style: solid;
+			border-width: 1px;
+			color: #000000;
+			background-color: #FFFFFF;
+		}
+
+		table.FlashcardTable td.Hidden {
+			display: none;
+		}
+
+		/* JMix styles */
+		div#SegmentDiv {
+			margin-top: 2em;
+			margin-bottom: 2em;
+			text-align: center;
+		}
+
+		a.ExSegment {
+			font-size: 120%;
+			font-weight: bold;
+			text-decoration: none;
+			color: #000000;
+		}
+
+		span.RemainingWordList {
+			font-style: italic;
+		}
+
+		div.DropLine {
+			position: absolute;
+			text-align: center;
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+			border-bottom-color: #15A2E6;
+			width: 80%;
+		}
+
+		/* JCloze styles */
+
+		.ClozeWordList {
+			text-align: center;
+			font-weight: bold;
+		}
+
+		div.ClozeBody {
+			text-align: left;
+			margin-top: 2em;
+			margin-bottom: 2em;
+			line-height: 2.0
+		}
+
+		span.GapSpan {
+			font-weight: bold;
+		}
+
+		/* JCross styles */
+
+		table.CrosswordGrid {
+			margin: auto auto 1em auto;
+			border-collapse: collapse;
+			padding: 0px;
+			background-color: #000000;
+		}
+
+		table.CrosswordGrid tbody tr td {
+			width: 1.5em;
+			height: 1.5em;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 140%;
+			padding: 1px;
+			margin: 0px;
+			border-style: solid;
+			border-width: 1px;
+			border-color: #000000;
+			color: #000000;
+		}
+
+		table.CrosswordGrid span {
+			color: #000000;
+		}
+
+		table.CrosswordGrid td.BlankCell {
+			background-color: #000000;
+			color: #000000;
+		}
+
+		table.CrosswordGrid td.LetterOnlyCell {
+			text-align: center;
+			vertical-align: middle;
+			background-color: #ffffff;
+			color: #000000;
+			font-weight: bold;
+		}
+
+		table.CrosswordGrid td.NumLetterCell {
+			text-align: left;
+			vertical-align: top;
+			background-color: #ffffff;
+			color: #000000;
+			padding: 1px;
+			font-weight: bold;
+		}
+
+		.NumLetterCellText {
+			cursor: pointer;
+			color: #000000;
+		}
+
+		.GridNum {
+			vertical-align: super;
+			font-size: 66%;
+			font-weight: bold;
+			text-decoration: none;
+			color: #000000;
+		}
+
+		.GridNum:hover,
+		.GridNum:visited {
+			color: #15A2E6;
+		}
+
+		table#Clues {
+			margin: auto;
+			vertical-align: top;
+		}
+
+		table#Clues td {
+			vertical-align: top;
+		}
+
+		table.ClueList {
+			margin: auto;
+		}
+
+		td.ClueNum {
+			text-align: right;
+			font-weight: bold;
+			vertical-align: top;
+		}
+
+		td.Clue {
+			text-align: left;
+		}
+
+		div#ClueEntry {
+			text-align: left;
+			margin-bottom: 1em;
+		}
+
+		/* Keypad styles */
+
+		div.Keypad {
+			text-align: center;
+			display: none;
+			/* initially hidden, shown if needed */
+			margin-bottom: 0.5em;
+		}
+
+		div.Keypad button {
+			font-family: 'Open Sans', serif;
+			font-size: 120%;
+			background-color: #ffffff;
+			color: #000000;
+			width: 2em;
+		}
+
+		/* JQuiz styles */
+
+		div.QuestionNavigation {
+			text-align: center;
+		}
+
+		.QNum {
+			margin: 0em 1em 0.5em 1em;
+			font-weight: bold;
+			vertical-align: middle;
+		}
+
+		textarea {
+			font-family: 'Open Sans', serif;
+		}
+
+		.QuestionText {
+			text-align: left;
+			margin: 0px;
+			font-size: 100%;
+		}
+
+		.Answer {
+			font-size: 120%;
+			letter-spacing: 0.1em;
+		}
+
+		.PartialAnswer {
+			font-size: 120%;
+			letter-spacing: 0.1em;
+			color: #15A2E6;
+		}
+
+		.Highlight {
+			color: #000000;
+			background-color: #ffff00;
+			font-weight: bold;
+			font-size: 120%;
+		}
+
+		ol.QuizQuestions {
+			text-align: left;
+			list-style-type: none;
+		}
+
+		li.QuizQuestion {
+			padding: 1em;
+			border-style: solid;
+			border-width: 0px 0px 1px 0px;
+		}
+
+		ol.MCAnswers {
+			text-align: left;
+			list-style-type: upper-alpha;
+			padding: 1em;
+		}
+
+		ol.MCAnswers li {
+			margin-bottom: 1em;
+		}
+
+		ol.MSelAnswers {
+			text-align: left;
+			list-style-type: lower-alpha;
+			padding: 1em;
+		}
+
+		div.ShortAnswer {
+			padding: 1em;
+		}
+
+		.FuncButton {
+			text-align: center;
+			border-style: solid;
+
+			border-left-color: #ffffff;
+			border-top-color: #ffffff;
+			border-right-color: #7f7f7f;
+			border-bottom-color: #7f7f7f;
+			color: #000000;
+			background-color: #FFFFFF;
+
+			border-width: 2px;
+			padding: 3px 6px 3px 6px;
+			cursor: pointer;
+		}
+
+		.FuncButtonUp {
+			color: #FFFFFF;
+			text-align: center;
+			border-style: solid;
+
+			border-left-color: #ffffff;
+			border-top-color: #ffffff;
+			border-right-color: #7f7f7f;
+			border-bottom-color: #7f7f7f;
+
+			background-color: #000000;
+			color: #FFFFFF;
+			border-width: 2px;
+			padding: 3px 6px 3px 6px;
+			cursor: pointer;
+		}
+
+		.FuncButtonDown {
+			color: #FFFFFF;
+			text-align: center;
+			border-style: solid;
+
+			border-left-color: #7f7f7f;
+			border-top-color: #7f7f7f;
+			border-right-color: #ffffff;
+			border-bottom-color: #ffffff;
+			background-color: #000000;
+			color: #FFFFFF;
+
+			border-width: 2px;
+			padding: 3px 6px 3px 6px;
+			cursor: pointer;
+		}
+
+		/*BeginNavBarStyle*/
+
+		div.NavButtonBar {
+			background-color: #000000;
+			text-align: center;
+			margin: 2px 0px 2px 0px;
+			clear: both;
+			font-size: 100%;
+		}
+
+		.NavButton {
+			border-style: solid;
+
+			border-left-color: #7f7f7f;
+			border-top-color: #7f7f7f;
+			border-right-color: #000000;
+			border-bottom-color: #000000;
+			background-color: #000000;
+			color: #ffffff;
+
+			border-width: 2px;
+			cursor: pointer;
+		}
+
+		.NavButtonUp {
+			border-style: solid;
+
+			border-left-color: #7f7f7f;
+			border-top-color: #7f7f7f;
+			border-right-color: #000000;
+			border-bottom-color: #000000;
+			color: #000000;
+			background-color: #ffffff;
+
+			border-width: 2px;
+			cursor: pointer;
+		}
+
+		.NavButtonDown {
+			border-style: solid;
+
+			border-left-color: #000000;
+			border-top-color: #000000;
+			border-right-color: #7f7f7f;
+			border-bottom-color: #7f7f7f;
+			color: #000000;
+			background-color: #ffffff;
+
+			border-width: 2px;
+			cursor: pointer;
+		}
+
+		/*EndNavBarStyle*/
+
+		a {
+			color: #15A2E6;
+		}
+
+		a:visited {
+			color: 15A2E6;
+		}
+
+		a:hover {
+			color: #15A2E6;
+		}
+
+		div.CardStyle {
+			position: absolute;
+			font-family: 'Open Sans', serif;
+			font-size: 100%;
+			padding: 5px;
+			border-style: solid;
+			border-width: 1px;
+			color: #000000;
+			background-color: #FFFFFF;
+			left: -50px;
+			top: -50px;
+			overflow: visible;
+		}
+
+		.rtl {
+			text-align: right;
+			font-size: 140%;
+		}
+	</style>
+
+
+	<script src="50QuestionQuiz.js" type="text/javascript"></script>
+</head>
+
+<body onload="StartUp()" id="TheBody" onunload="CheckLMSFinish()">
+
+
+	<br>
+	<div class="top-banner">
+		<div class="row">
+			<div class="col-sm-6" style="text-align: left;">
+				<img src="https://www.teachdontpreach.ie/wordpress/wp-content/uploads/2011/01/UNlogo.jpg"
+					height="100px">
+			</div>
+			<div class="col-sm-6" style="text-align: center">
+				<h1>Action through Words</h1>
+				<span id="motto">Learning English, Learning About the United Nations</span>
+			</div>
+		</div>
+	</div>
+	<div class="Titles">
+		<h1>50 Question Quiz</h1>
+		<h2 class="ExerciseTitle"></h2>
+	</div>
+
+	<div id="InstructionsDiv" class="StdDiv">
+		Choose the answer you think is correct. Try to complete all the questions.
+		<div id="Instructions"></div>
+	</div>
+
+
+
+
+	<div id="MainDiv" class="StdDiv">
+
+		<div id="QNav" class="QuestionNavigation">
+
+			<p style="text-align: right;">
+				<button id="ShowMethodButton" class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+					onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)"
+					onmouseup="FuncBtnOver(this)" onclick="ShowHideQuestions(); return false;">Show all
+					questions</button>
+			</p>
+
+			<div id="OneByOneReadout">
+				<button id="PrevQButton" class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+					onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)"
+					onmouseup="FuncBtnOver(this)" onclick="ChangeQ(-1); return false;">&lt;=</button>
+
+				<span id="QNumReadout" class="QNum">&nbsp;</span>
+
+				<button id="NextQButton" class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+					onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)"
+					onmouseup="FuncBtnOver(this)" onclick="ChangeQ(1); return false;">=&gt;</button>
+				<br />
+			</div>
+
+		</div>
+
+		<ol class="QuizQuestions" id="Questions">
+			<li class="QuizQuestion" id="Q_0" style="display: none;">
+				<div class="QuestionText">How many member states were there when the UN first began?</div>
+				<ol class="MCAnswers">
+					<li id="Q_0_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_0_0_Btn"
+							onclick="CheckMCAnswer(0,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;51</li>
+					<li id="Q_0_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_0_1_Btn"
+							onclick="CheckMCAnswer(0,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;49</li>
+					<li id="Q_0_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_0_2_Btn"
+							onclick="CheckMCAnswer(0,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;50</li>
+					<li id="Q_0_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_0_3_Btn"
+							onclick="CheckMCAnswer(0,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;100</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_1" style="display: none;">
+				<div class="QuestionText">The author of the book, "International Government", which advocated the idea
+					of a world body to keep peace, was</div>
+				<ol class="MCAnswers">
+					<li id="Q_1_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_1_0_Btn"
+							onclick="CheckMCAnswer(1,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Jan Smuts
+					</li>
+					<li id="Q_1_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_1_1_Btn"
+							onclick="CheckMCAnswer(1,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Theodore
+						Roosevelt</li>
+					<li id="Q_1_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_1_2_Btn"
+							onclick="CheckMCAnswer(1,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Woodrow
+						Wilson</li>
+					<li id="Q_1_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_1_3_Btn"
+							onclick="CheckMCAnswer(1,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Leonard
+						Woolf</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_2" style="display: none;">
+				<div class="QuestionText">What was the name of the nineteenth-century writer whose work, "A Declaration
+					of the Rights of Man" was a basis for the UN Charter?</div>
+				<ol class="MCAnswers">
+					<li id="Q_2_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_2_0_Btn"
+							onclick="CheckMCAnswer(2,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Lord Byron
+					</li>
+					<li id="Q_2_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_2_1_Btn"
+							onclick="CheckMCAnswer(2,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Leonard
+						Woolf</li>
+					<li id="Q_2_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_2_2_Btn"
+							onclick="CheckMCAnswer(2,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;H.G. Wells
+					</li>
+					<li id="Q_2_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_2_3_Btn"
+							onclick="CheckMCAnswer(2,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Leon Auguste
+						Bourgeois</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_3" style="display: none;">
+				<div class="QuestionText">What was the name of the UN's predecessor?</div>
+				<ol class="MCAnswers">
+					<li id="Q_3_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_3_0_Btn"
+							onclick="CheckMCAnswer(3,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the
+						International Government</li>
+					<li id="Q_3_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_3_1_Btn"
+							onclick="CheckMCAnswer(3,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the League
+						of Nations</li>
+					<li id="Q_3_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_3_2_Btn"
+							onclick="CheckMCAnswer(3,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the
+						Associated Nations</li>
+					<li id="Q_3_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_3_3_Btn"
+							onclick="CheckMCAnswer(3,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the World
+						Council</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_4" style="display: none;">
+				<div class="QuestionText">What was the name of he U.S. President who worked very hard to promote the
+					creation of the UN -- but then died two weeks before the UN Charter was signed?</div>
+				<ol class="MCAnswers">
+					<li id="Q_4_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_4_0_Btn"
+							onclick="CheckMCAnswer(4,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Woodrow
+						Wilson</li>
+					<li id="Q_4_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_4_1_Btn"
+							onclick="CheckMCAnswer(4,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Theodore
+						Roosevelt</li>
+					<li id="Q_4_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_4_2_Btn"
+							onclick="CheckMCAnswer(4,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Franklin
+						Roosevelt</li>
+					<li id="Q_4_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_4_3_Btn"
+							onclick="CheckMCAnswer(4,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Harry Truman
+					</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_5" style="display: none;">
+				<div class="QuestionText">In the General Assembly,</div>
+				<ol class="MCAnswers">
+					<li id="Q_5_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_5_0_Btn"
+							onclick="CheckMCAnswer(5,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;large
+						nations have more votes than small nations</li>
+					<li id="Q_5_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_5_1_Btn"
+							onclick="CheckMCAnswer(5,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;large
+						nations can vote, but not small nations</li>
+					<li id="Q_5_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_5_2_Btn"
+							onclick="CheckMCAnswer(5,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;large
+						nations and small nations have equal voting power</li>
+					<li id="Q_5_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_5_3_Btn"
+							onclick="CheckMCAnswer(5,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;small
+						nations can have more voting power than large nations</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_6" style="display: none;">
+				<div class="QuestionText">The Security Council has five permanent members and</div>
+				<ol class="MCAnswers">
+					<li id="Q_6_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_6_0_Btn"
+							onclick="CheckMCAnswer(6,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;15 rotating
+						members with one-year terms</li>
+					<li id="Q_6_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_6_1_Btn"
+							onclick="CheckMCAnswer(6,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;10 rotating
+						members with two-year terms</li>
+					<li id="Q_6_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_6_2_Btn"
+							onclick="CheckMCAnswer(6,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;12 permanent
+						members, each with five-year terms</li>
+					<li id="Q_6_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_6_3_Btn"
+							onclick="CheckMCAnswer(6,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;no rotating
+						members</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_7" style="display: none;">
+				<div class="QuestionText">In 1944, discreet planning meetings were held to create a successor to the
+					League of Nations. The meetings were held at which location?</div>
+				<ol class="MCAnswers">
+					<li id="Q_7_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_7_0_Btn"
+							onclick="CheckMCAnswer(7,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Dumbarton
+						Oaks, Washington D.C.</li>
+					<li id="Q_7_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_7_1_Btn"
+							onclick="CheckMCAnswer(7,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The Palace
+						of Nations, Geneva</li>
+					<li id="Q_7_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_7_2_Btn"
+							onclick="CheckMCAnswer(7,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The US
+						Mission to International Organizations, Vienna</li>
+					<li id="Q_7_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_7_3_Btn"
+							onclick="CheckMCAnswer(7,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Harvard
+						University, Boston</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_8" style="display: none;">
+				<div class="QuestionText">Because they did not want to repeat the mistakes of the League of Nations, the
+					founders of the United Nations decided to create a stronger world forum by making a stronger
+					executive branch. The name of this executive branch is</div>
+				<ol class="MCAnswers">
+					<li id="Q_8_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_8_0_Btn"
+							onclick="CheckMCAnswer(8,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the General
+						Assembly</li>
+					<li id="Q_8_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_8_1_Btn"
+							onclick="CheckMCAnswer(8,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the Security
+						Council</li>
+					<li id="Q_8_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_8_2_Btn"
+							onclick="CheckMCAnswer(8,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the
+						International Court of Justice</li>
+					<li id="Q_8_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_8_3_Btn"
+							onclick="CheckMCAnswer(8,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the
+						Trusteeship Council</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_9" style="display: none;">
+				<div class="QuestionText">The decisions of the Security Council are</div>
+				<ol class="MCAnswers">
+					<li id="Q_9_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_9_0_Btn"
+							onclick="CheckMCAnswer(9,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;non-binding
+					</li>
+					<li id="Q_9_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_9_1_Btn"
+							onclick="CheckMCAnswer(9,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;binding</li>
+					<li id="Q_9_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_9_2_Btn"
+							onclick="CheckMCAnswer(9,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;partially
+						binding</li>
+					<li id="Q_9_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_9_3_Btn"
+							onclick="CheckMCAnswer(9,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;only
+						recommendations</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_10" style="display: none;">
+				<div class="QuestionText">The United Nations got its name from a</div>
+				<ol class="MCAnswers">
+					<li id="Q_10_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_10_0_Btn"
+							onclick="CheckMCAnswer(10,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;poem by
+						William Shakespeare</li>
+					<li id="Q_10_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_10_1_Btn"
+							onclick="CheckMCAnswer(10,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;poem by
+						Lord Byron</li>
+					<li id="Q_10_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_10_2_Btn"
+							onclick="CheckMCAnswer(10,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;book by
+						Leonard Woolf</li>
+					<li id="Q_10_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_10_3_Btn"
+							onclick="CheckMCAnswer(10,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;song by
+						Pablo Casals</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_11" style="display: none;">
+				<div class="QuestionText">The Nobel Peace Prize winner also known as the "spiritual father of the United
+					Nations" was</div>
+				<ol class="MCAnswers">
+					<li id="Q_11_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_11_0_Btn"
+							onclick="CheckMCAnswer(11,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Jan Smuts
+					</li>
+					<li id="Q_11_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_11_1_Btn"
+							onclick="CheckMCAnswer(11,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Franklin
+						Roosevelt</li>
+					<li id="Q_11_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_11_2_Btn"
+							onclick="CheckMCAnswer(11,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;H.G. Wells
+					</li>
+					<li id="Q_11_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_11_3_Btn"
+							onclick="CheckMCAnswer(11,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Leon
+						Auguste Bourgeois</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_12" style="display: none;">
+				<div class="QuestionText">In total, how many main branches does the UN have?</div>
+				<ol class="MCAnswers">
+					<li id="Q_12_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_12_0_Btn"
+							onclick="CheckMCAnswer(12,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;five</li>
+					<li id="Q_12_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_12_1_Btn"
+							onclick="CheckMCAnswer(12,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;seven</li>
+					<li id="Q_12_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_12_2_Btn"
+							onclick="CheckMCAnswer(12,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;six</li>
+					<li id="Q_12_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_12_3_Btn"
+							onclick="CheckMCAnswer(12,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;thirty-eight
+					</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_13" style="display: none;">
+				<div class="QuestionText">In the General Assembly, do large nations have more voting power than small
+					nations?</div>
+				<ol class="MCAnswers">
+					<li id="Q_13_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_13_0_Btn"
+							onclick="CheckMCAnswer(13,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;yes</li>
+					<li id="Q_13_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_13_1_Btn"
+							onclick="CheckMCAnswer(13,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;no</li>
+					<li id="Q_13_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_13_2_Btn"
+							onclick="CheckMCAnswer(13,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;sometimes
+					</li>
+					<li id="Q_13_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_13_3_Btn"
+							onclick="CheckMCAnswer(13,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;only if the
+						resolution is binding</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_14" style="display: none;">
+				<div class="QuestionText">On which date was the UN Charter ratified?</div>
+				<ol class="MCAnswers">
+					<li id="Q_14_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_14_0_Btn"
+							onclick="CheckMCAnswer(14,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;15 June,
+						1845</li>
+					<li id="Q_14_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_14_1_Btn"
+							onclick="CheckMCAnswer(14,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;24 October
+						1945</li>
+					<li id="Q_14_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_14_2_Btn"
+							onclick="CheckMCAnswer(14,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;16 July
+						1946</li>
+					<li id="Q_14_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_14_3_Btn"
+							onclick="CheckMCAnswer(14,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;21
+						September 1946</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_15" style="display: none;">
+				<div class="QuestionText">Who said :"The Charter of the United Nations is the first, most daring code of
+					behaviour addressed to the most powerful of all institutions on the planet -- armed nations."</div>
+				<ol class="MCAnswers">
+					<li id="Q_15_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_15_0_Btn"
+							onclick="CheckMCAnswer(15,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Secretary-General
+						Kofi Annan</li>
+					<li id="Q_15_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_15_1_Btn"
+							onclick="CheckMCAnswer(15,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Secretary-General
+						Dag Hammarskjold</li>
+					<li id="Q_15_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_15_2_Btn"
+							onclick="CheckMCAnswer(15,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Secretary-General
+						Trygve Lie</li>
+					<li id="Q_15_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_15_3_Btn"
+							onclick="CheckMCAnswer(15,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Secretary-General
+						U Thant</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_16" style="display: none;">
+				<div class="QuestionText">Who said "The UN and its labors are the background noise of our global age..."
+				</div>
+				<ol class="MCAnswers">
+					<li id="Q_16_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_16_0_Btn"
+							onclick="CheckMCAnswer(16,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Secretary-General
+						Kofi Annan</li>
+					<li id="Q_16_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_16_1_Btn"
+							onclick="CheckMCAnswer(16,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Secretary-General
+						Boutros Boutros-Ghali</li>
+					<li id="Q_16_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_16_2_Btn"
+							onclick="CheckMCAnswer(16,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Stephen
+						Schlesinger, author</li>
+					<li id="Q_16_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_16_3_Btn"
+							onclick="CheckMCAnswer(16,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Shashi
+						Tharoor, Under-Secretary-General</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_17" style="display: none;">
+				<div class="QuestionText">What is "Angkor Watt?"</div>
+				<ol class="MCAnswers">
+					<li id="Q_17_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_17_0_Btn"
+							onclick="CheckMCAnswer(17,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the capital
+						of Timor Leste</li>
+					<li id="Q_17_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_17_1_Btn"
+							onclick="CheckMCAnswer(17,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the great
+						temples of Cambodia</li>
+					<li id="Q_17_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_17_2_Btn"
+							onclick="CheckMCAnswer(17,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the capital
+						of Cambodia</li>
+					<li id="Q_17_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_17_3_Btn"
+							onclick="CheckMCAnswer(17,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;a great
+						city in Sudan</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_18" style="display: none;">
+				<div class="QuestionText">One of the tasks of the UN Mission in Cambodia was to</div>
+				<ol class="MCAnswers">
+					<li id="Q_18_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_18_0_Btn"
+							onclick="CheckMCAnswer(18,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;train local
+						citizens in more efficient farming methods</li>
+					<li id="Q_18_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_18_1_Btn"
+							onclick="CheckMCAnswer(18,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;train local
+						people to vote in the first free elections</li>
+					<li id="Q_18_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_18_2_Btn"
+							onclick="CheckMCAnswer(18,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;teach
+						people how to read</li>
+					<li id="Q_18_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_18_3_Btn"
+							onclick="CheckMCAnswer(18,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;teach
+						people to be translators</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_19" style="display: none;">
+				<div class="QuestionText">According to the UN Protocol on the Rights of the Child,</div>
+				<ol class="MCAnswers">
+					<li id="Q_19_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_19_0_Btn"
+							onclick="CheckMCAnswer(19,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;no child
+						under 18 should be forced into the military</li>
+					<li id="Q_19_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_19_1_Btn"
+							onclick="CheckMCAnswer(19,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;only
+						females under 18 should not be compelled to fight in the military</li>
+					<li id="Q_19_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_19_2_Btn"
+							onclick="CheckMCAnswer(19,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;child
+						soldiers cannot be rehabilitated</li>
+					<li id="Q_19_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_19_3_Btn"
+							onclick="CheckMCAnswer(19,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;child
+						soldiers should not be disarmed</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_20" style="display: none;">
+				<div class="QuestionText">Who wrote the following lines of poetry: "Behold the child soldier, the
+					murdered child, /Sent in battalions into the sun-scorched light /For diamonds, for ivory, black gold
+					or white! /Pencil in hand, he would sketch only death."</div>
+				<ol class="MCAnswers">
+					<li id="Q_20_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_20_0_Btn"
+							onclick="CheckMCAnswer(20,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Lord Byron
+					</li>
+					<li id="Q_20_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_20_1_Btn"
+							onclick="CheckMCAnswer(20,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Isabelle
+						Balot</li>
+					<li id="Q_20_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_20_2_Btn"
+							onclick="CheckMCAnswer(20,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Shashi
+						Tharoor</li>
+					<li id="Q_20_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_20_3_Btn"
+							onclick="CheckMCAnswer(20,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;H.G. Wells
+					</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_21" style="display: none;">
+				<div class="QuestionText">Actress Angelina Jolie is a Goodwill Ambassador for which UN agency?</div>
+				<ol class="MCAnswers">
+					<li id="Q_21_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_21_0_Btn"
+							onclick="CheckMCAnswer(21,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;UNICEF</li>
+					<li id="Q_21_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_21_1_Btn"
+							onclick="CheckMCAnswer(21,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;UNESCO</li>
+					<li id="Q_21_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_21_2_Btn"
+							onclick="CheckMCAnswer(21,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;UNDP</li>
+					<li id="Q_21_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_21_3_Btn"
+							onclick="CheckMCAnswer(21,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;UNHCR</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_22" style="display: none;">
+				<div class="QuestionText">How many refugees are under the protection of UNHCR?<br /></div>
+				<ol class="MCAnswers">
+					<li id="Q_22_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_22_0_Btn"
+							onclick="CheckMCAnswer(22,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;35 million
+					</li>
+					<li id="Q_22_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_22_1_Btn"
+							onclick="CheckMCAnswer(22,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;20 million
+					</li>
+					<li id="Q_22_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_22_2_Btn"
+							onclick="CheckMCAnswer(22,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;17.5
+						million</li>
+					<li id="Q_22_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_22_3_Btn"
+							onclick="CheckMCAnswer(22,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;nearly 8
+						million</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_23" style="display: none;">
+				<div class="QuestionText">Goodwill Ambassador Angelina Jolie donated her own money to</div>
+				<ol class="MCAnswers">
+					<li id="Q_23_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_23_0_Btn"
+							onclick="CheckMCAnswer(23,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;build a
+						refugee Center in Tanzania</li>
+					<li id="Q_23_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_23_1_Btn"
+							onclick="CheckMCAnswer(23,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;build a
+						movie theater in Kosovo</li>
+					<li id="Q_23_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_23_2_Btn"
+							onclick="CheckMCAnswer(23,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;build a
+						school for girls in Kenya</li>
+					<li id="Q_23_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_23_3_Btn"
+							onclick="CheckMCAnswer(23,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;build a
+						school for girls in the Democratic Republic of the Congo</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_24" style="display: none;">
+				<div class="QuestionText">NBA Basketball Star Dikembe Mutombo, a UN Goodwill "Messenger of Peace", has
+					made public service announcements for </div>
+				<ol class="MCAnswers">
+					<li id="Q_24_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_24_0_Btn"
+							onclick="CheckMCAnswer(24,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;AIDS
+						awareness</li>
+					<li id="Q_24_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_24_1_Btn"
+							onclick="CheckMCAnswer(24,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;girls'
+						education</li>
+					<li id="Q_24_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_24_2_Btn"
+							onclick="CheckMCAnswer(24,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;anti-smoking
+						awareness</li>
+					<li id="Q_24_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_24_3_Btn"
+							onclick="CheckMCAnswer(24,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;doing
+						sports, not drugs</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_25" style="display: none;">
+				<div class="QuestionText">Mutombo donated his own money to build a<br /></div>
+				<ol class="MCAnswers">
+					<li id="Q_25_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_25_0_Btn"
+							onclick="CheckMCAnswer(25,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;school in
+						the Congo</li>
+					<li id="Q_25_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_25_1_Btn"
+							onclick="CheckMCAnswer(25,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;refugee
+						center in Tanzania</li>
+					<li id="Q_25_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_25_2_Btn"
+							onclick="CheckMCAnswer(25,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;hospital in
+						the Congo</li>
+					<li id="Q_25_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_25_3_Btn"
+							onclick="CheckMCAnswer(25,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;community
+						center in Kinshasa</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_26" style="display: none;">
+				<div class="QuestionText">What is a necessary pre-condition for UN Peacekeepers to carry out their work?
+				</div>
+				<ol class="MCAnswers">
+					<li id="Q_26_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_26_0_Btn"
+							onclick="CheckMCAnswer(26,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The
+						disputing parties must destroy their weapons</li>
+					<li id="Q_26_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_26_1_Btn"
+							onclick="CheckMCAnswer(26,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The
+						disputing parties must de-mine all land mines</li>
+					<li id="Q_26_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_26_2_Btn"
+							onclick="CheckMCAnswer(26,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The
+						disputing parties must respect humanitarian norms</li>
+					<li id="Q_26_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_26_3_Btn"
+							onclick="CheckMCAnswer(26,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The
+						disputing parties must promise never to fight again</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_27" style="display: none;">
+				<div class="QuestionText">The Security Council has the authority to deply a peacekeeping mission
+					if<br /></div>
+				<ol class="MCAnswers">
+					<li id="Q_27_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_27_0_Btn"
+							onclick="CheckMCAnswer(27,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;9 out of 15
+						Security Council members vote in favour of it, including one permanent member</li>
+					<li id="Q_27_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_27_1_Btn"
+							onclick="CheckMCAnswer(27,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;9 out of 15
+						Security Council members vote in favour of it, including two permanent members</li>
+					<li id="Q_27_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_27_2_Btn"
+							onclick="CheckMCAnswer(27,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;9 out of 15
+						Security Council members vote in favour of it and no permanent member vetoes it</li>
+					<li id="Q_27_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_27_3_Btn"
+							onclick="CheckMCAnswer(27,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;9 out of 15
+						Security Council members vote in favour of it and only one permanent member vetoes it</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_28" style="display: none;">
+				<div class="QuestionText">The UN Decade for Literacy took place from</div>
+				<ol class="MCAnswers">
+					<li id="Q_28_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_28_0_Btn"
+							onclick="CheckMCAnswer(28,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;2004 to
+						2014</li>
+					<li id="Q_28_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_28_1_Btn"
+							onclick="CheckMCAnswer(28,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;2000 to
+						2010</li>
+					<li id="Q_28_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_28_2_Btn"
+							onclick="CheckMCAnswer(28,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;1994 to
+						2004</li>
+					<li id="Q_28_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_28_3_Btn"
+							onclick="CheckMCAnswer(28,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;2003 to
+						2012</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_29" style="display: none;">
+				<div class="QuestionText">How many adults in the world are illiterate?<br /></div>
+				<ol class="MCAnswers">
+					<li id="Q_29_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_29_0_Btn"
+							onclick="CheckMCAnswer(29,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Two thirds
+						of the world population</li>
+					<li id="Q_29_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_29_1_Btn"
+							onclick="CheckMCAnswer(29,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;1 billion
+					</li>
+					<li id="Q_29_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_29_2_Btn"
+							onclick="CheckMCAnswer(29,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;860 million
+					</li>
+					<li id="Q_29_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_29_3_Btn"
+							onclick="CheckMCAnswer(29,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;520 million
+					</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_30" style="display: none;">
+				<div class="QuestionText">What fraction of illiterate adults are women?</div>
+				<ol class="MCAnswers">
+					<li id="Q_30_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_30_0_Btn"
+							onclick="CheckMCAnswer(30,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;One third
+					</li>
+					<li id="Q_30_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_30_1_Btn"
+							onclick="CheckMCAnswer(30,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;More than
+						half</li>
+					<li id="Q_30_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_30_2_Btn"
+							onclick="CheckMCAnswer(30,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Three
+						fourths</li>
+					<li id="Q_30_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_30_3_Btn"
+							onclick="CheckMCAnswer(30,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Two thirds
+					</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_31" style="display: none;">
+				<div class="QuestionText">In developing countries, teaching women to read aids the economic progress of
+					the entire community. When women have greater earning power, they first spend their higher incomes
+					on </div>
+				<ol class="MCAnswers">
+					<li id="Q_31_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_31_0_Btn"
+							onclick="CheckMCAnswer(31,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;shopping
+						for themselves</li>
+					<li id="Q_31_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_31_1_Btn"
+							onclick="CheckMCAnswer(31,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;educating
+						themselves</li>
+					<li id="Q_31_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_31_2_Btn"
+							onclick="CheckMCAnswer(31,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;educating
+						their children</li>
+					<li id="Q_31_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_31_3_Btn"
+							onclick="CheckMCAnswer(31,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;educating
+						their husbands</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_32" style="display: none;">
+				<div class="QuestionText">How many people across the globe are infected with HIV-AIDS?</div>
+				<ol class="MCAnswers">
+					<li id="Q_32_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_32_0_Btn"
+							onclick="CheckMCAnswer(32,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;42,000</li>
+					<li id="Q_32_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_32_1_Btn"
+							onclick="CheckMCAnswer(32,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;1 million
+					</li>
+					<li id="Q_32_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_32_2_Btn"
+							onclick="CheckMCAnswer(32,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;10 million
+					</li>
+					<li id="Q_32_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_32_3_Btn"
+							onclick="CheckMCAnswer(32,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;42 million
+					</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_33" style="display: none;">
+				<div class="QuestionText">Because AIDS has had such far-reaching effects, for the first time in the
+					history of the United Nations, the Security Council took up a health issue. This was in the year
+				</div>
+				<ol class="MCAnswers">
+					<li id="Q_33_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_33_0_Btn"
+							onclick="CheckMCAnswer(33,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;2001</li>
+					<li id="Q_33_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_33_1_Btn"
+							onclick="CheckMCAnswer(33,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;1999</li>
+					<li id="Q_33_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_33_2_Btn"
+							onclick="CheckMCAnswer(33,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;2000</li>
+					<li id="Q_33_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_33_3_Btn"
+							onclick="CheckMCAnswer(33,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;1991</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_34" style="display: none;">
+				<div class="QuestionText">Secretary-General Kofi Annan has called the AIDS crisis a greater threat to
+					peace and security in Africa than</div>
+				<ol class="MCAnswers">
+					<li id="Q_34_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_34_0_Btn"
+							onclick="CheckMCAnswer(34,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;warfare
+						itself</li>
+					<li id="Q_34_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_34_1_Btn"
+							onclick="CheckMCAnswer(34,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;other
+						diseases</li>
+					<li id="Q_34_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_34_2_Btn"
+							onclick="CheckMCAnswer(34,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;many
+						weapons of mass destruction</li>
+					<li id="Q_34_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_34_3_Btn"
+							onclick="CheckMCAnswer(34,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;drought
+					</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_35" style="display: none;">
+				<div class="QuestionText">How many orphans has the AIDS crisis created world-wide?</div>
+				<ol class="MCAnswers">
+					<li id="Q_35_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_35_0_Btn"
+							onclick="CheckMCAnswer(35,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;10 million
+					</li>
+					<li id="Q_35_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_35_1_Btn"
+							onclick="CheckMCAnswer(35,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;nearly
+						50,000</li>
+					<li id="Q_35_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_35_2_Btn"
+							onclick="CheckMCAnswer(35,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;nearly
+						500,000</li>
+					<li id="Q_35_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_35_3_Btn"
+							onclick="CheckMCAnswer(35,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;13 million
+					</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_36" style="display: none;">
+				<div class="QuestionText">To help promote testing and treatment of the AIDS virus, UN-AIDS programme
+				</div>
+				<ol class="MCAnswers">
+					<li id="Q_36_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_36_0_Btn"
+							onclick="CheckMCAnswer(36,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;sends UN
+						experts to high AIDS-infected areas make speeches about AIDS statisitics directly to local
+						people</li>
+					<li id="Q_36_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_36_1_Btn"
+							onclick="CheckMCAnswer(36,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;compels
+						people of high AIDS-infected regions to be tested</li>
+					<li id="Q_36_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_36_2_Btn"
+							onclick="CheckMCAnswer(36,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;trains
+						hairdressers to insert information about AIDS testing and treatment to their clients</li>
+					<li id="Q_36_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_36_3_Btn"
+							onclick="CheckMCAnswer(36,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;compels
+						local people of high AIDS-infected regions to tell neighbours when they are tested for AIDS</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_37" style="display: none;">
+				<div class="QuestionText">To increase the economic level of rural villages hard hit by the spread of
+					AIDS, the UN has promoted the work of local craftsmakers by</div>
+				<ol class="MCAnswers">
+					<li id="Q_37_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_37_0_Btn"
+							onclick="CheckMCAnswer(37,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;promoting
+						tourism to those villages</li>
+					<li id="Q_37_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_37_1_Btn"
+							onclick="CheckMCAnswer(37,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;promoting
+						micro-credit cooperatives in those villages</li>
+					<li id="Q_37_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_37_2_Btn"
+							onclick="CheckMCAnswer(37,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;buying the
+						crafts at very high prices</li>
+					<li id="Q_37_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_37_3_Btn"
+							onclick="CheckMCAnswer(37,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;putting
+						children to work selling crafts</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_38" style="display: none;">
+				<div class="QuestionText">The Millennium Development Goals aim to boost human development in</div>
+				<ol class="MCAnswers">
+					<li id="Q_38_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_38_0_Btn"
+							onclick="CheckMCAnswer(38,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;five
+						different areas</li>
+					<li id="Q_38_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_38_1_Btn"
+							onclick="CheckMCAnswer(38,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;ten
+						different areas</li>
+					<li id="Q_38_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_38_2_Btn"
+							onclick="CheckMCAnswer(38,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;no less
+						than 100 different areas</li>
+					<li id="Q_38_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_38_3_Btn"
+							onclick="CheckMCAnswer(38,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;eight
+						different areas</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_39" style="display: none;">
+				<div class="QuestionText">One of the Millennium Development Goals is to<br /></div>
+				<ol class="MCAnswers">
+					<li id="Q_39_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_39_0_Btn"
+							onclick="CheckMCAnswer(39,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;decrease by
+						half the number of children who go to school by 2015</li>
+					<li id="Q_39_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_39_1_Btn"
+							onclick="CheckMCAnswer(39,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;increase by
+						half the number of children who go to school by 2005</li>
+					<li id="Q_39_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_39_2_Btn"
+							onclick="CheckMCAnswer(39,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;make sure
+						that all children have access to secondary education by 2005</li>
+					<li id="Q_39_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_39_3_Btn"
+							onclick="CheckMCAnswer(39,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;make sure
+						all children have access to primary and secondary education by 2015</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_40" style="display: none;">
+				<div class="QuestionText">All of the following are Millenium Development Goals except</div>
+				<ol class="MCAnswers">
+					<li id="Q_40_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_40_0_Btn"
+							onclick="CheckMCAnswer(40,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;developing
+						global partnerships for development</li>
+					<li id="Q_40_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_40_1_Btn"
+							onclick="CheckMCAnswer(40,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;making sure
+						all people have a minimum of 1860 calories daily by 2015</li>
+					<li id="Q_40_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_40_2_Btn"
+							onclick="CheckMCAnswer(40,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;improving
+						the health of mothers</li>
+					<li id="Q_40_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_40_3_Btn"
+							onclick="CheckMCAnswer(40,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;eradicating
+						extreme poverty</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_41" style="display: none;">
+				<div class="QuestionText">Jeffrey Sachs, a Special Advisor to the Secretary-General on the Millennium
+					Development Goals is a professor at</div>
+				<ol class="MCAnswers">
+					<li id="Q_41_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_41_0_Btn"
+							onclick="CheckMCAnswer(41,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Columbia
+						University</li>
+					<li id="Q_41_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_41_1_Btn"
+							onclick="CheckMCAnswer(41,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;New York
+						University</li>
+					<li id="Q_41_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_41_2_Btn"
+							onclick="CheckMCAnswer(41,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Harvard
+						University</li>
+					<li id="Q_41_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_41_3_Btn"
+							onclick="CheckMCAnswer(41,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Cambridge
+						University</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_42" style="display: none;">
+				<div class="QuestionText">Professor Sachs says there is a gap of _________ dollars a year in the amount
+					rich countries promise to aid development and hat they actually give.</div>
+				<ol class="MCAnswers">
+					<li id="Q_42_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_42_0_Btn"
+							onclick="CheckMCAnswer(42,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;50 million
+					</li>
+					<li id="Q_42_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_42_1_Btn"
+							onclick="CheckMCAnswer(42,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;50 billion
+					</li>
+					<li id="Q_42_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_42_2_Btn"
+							onclick="CheckMCAnswer(42,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;125 million
+					</li>
+					<li id="Q_42_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_42_3_Btn"
+							onclick="CheckMCAnswer(42,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;125 billion
+					</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_43" style="display: none;">
+				<div class="QuestionText">Through the UN Office of Outer Space Affairs (UNOOSA), satellite technology,
+					once used for military purposes during the Cold War, has now transferred its use to</div>
+				<ol class="MCAnswers">
+					<li id="Q_43_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_43_0_Btn"
+							onclick="CheckMCAnswer(43,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;forewarn of
+						military invasions</li>
+					<li id="Q_43_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_43_1_Btn"
+							onclick="CheckMCAnswer(43,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;forewarn of
+						natural disasters</li>
+					<li id="Q_43_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_43_2_Btn"
+							onclick="CheckMCAnswer(43,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;aid in
+						practice military maneuvers</li>
+					<li id="Q_43_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_43_3_Btn"
+							onclick="CheckMCAnswer(43,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;stop
+						natural disasters</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_44" style="display: none;">
+				<div class="QuestionText">Through UNOOSA, satellite technology is also used </div>
+				<ol class="MCAnswers">
+					<li id="Q_44_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_44_0_Btn"
+							onclick="CheckMCAnswer(44,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;to provide
+						multi-media entertainment in local theaters</li>
+					<li id="Q_44_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_44_1_Btn"
+							onclick="CheckMCAnswer(44,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;to provide
+						multi-media art exhibits in local museums</li>
+					<li id="Q_44_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_44_2_Btn"
+							onclick="CheckMCAnswer(44,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;to aid
+						teachers in creating multi-media lessons for their classes</li>
+					<li id="Q_44_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_44_3_Btn"
+							onclick="CheckMCAnswer(44,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;to prepare
+						students to take trips to outer space</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_45" style="display: none;">
+				<div class="QuestionText">UNESCO's World Heritage List was established to</div>
+				<ol class="MCAnswers">
+					<li id="Q_45_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_45_0_Btn"
+							onclick="CheckMCAnswer(45,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;preserve
+						mainly great cultural landmarks</li>
+					<li id="Q_45_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_45_1_Btn"
+							onclick="CheckMCAnswer(45,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;to preserve
+						only great natural wonders</li>
+					<li id="Q_45_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_45_2_Btn"
+							onclick="CheckMCAnswer(45,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;to preserve
+						both great cultural and natural wonders</li>
+					<li id="Q_45_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_45_3_Btn"
+							onclick="CheckMCAnswer(45,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;to teach
+						individauls more about their family history</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_46" style="display: none;">
+				<div class="QuestionText">The World Heritage List was established in</div>
+				<ol class="MCAnswers">
+					<li id="Q_46_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_46_0_Btn"
+							onclick="CheckMCAnswer(46,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;1972</li>
+					<li id="Q_46_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_46_1_Btn"
+							onclick="CheckMCAnswer(46,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;1952</li>
+					<li id="Q_46_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_46_2_Btn"
+							onclick="CheckMCAnswer(46,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;1945</li>
+					<li id="Q_46_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_46_3_Btn"
+							onclick="CheckMCAnswer(46,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;2000</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_47" style="display: none;">
+				<div class="QuestionText">All of the following are examples of places on UNESCO's World Heritage List
+					except</div>
+				<ol class="MCAnswers">
+					<li id="Q_47_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_47_0_Btn"
+							onclick="CheckMCAnswer(47,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The Great
+						Barrier Reef in Australia</li>
+					<li id="Q_47_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_47_1_Btn"
+							onclick="CheckMCAnswer(47,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the Eiffel
+						Tower in France</li>
+					<li id="Q_47_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_47_2_Btn"
+							onclick="CheckMCAnswer(47,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the Grand
+						Canyon in Arizona</li>
+					<li id="Q_47_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_47_3_Btn"
+							onclick="CheckMCAnswer(47,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the
+						University of Virginia campus</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_48" style="display: none;">
+				<div class="QuestionText">Alfred Nobel, the nineteenth-century Swedish altruist, left funds in his will
+					to create five prizes for persons whose work, in his words</div>
+				<ol class="MCAnswers">
+					<li id="Q_48_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_48_0_Btn"
+							onclick="CheckMCAnswer(48,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;conferred
+						the greatest benefit on mankind</li>
+					<li id="Q_48_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_48_1_Btn"
+							onclick="CheckMCAnswer(48,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;increased
+						education for all</li>
+					<li id="Q_48_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_48_2_Btn"
+							onclick="CheckMCAnswer(48,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;tried to
+						put an end to all wars</li>
+					<li id="Q_48_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_48_3_Btn"
+							onclick="CheckMCAnswer(48,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;promoted
+						gender equality</li>
+				</ol>
+			</li>
+			<li class="QuizQuestion" id="Q_49" style="display: none;">
+				<div class="QuestionText">In the year 2001, the United Nations Secretary-General and the United Nations
+					Organization, itself, were joint recipients of the Nobel Peace Prize </div>
+				<ol class="MCAnswers">
+					<li id="Q_49_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_49_0_Btn"
+							onclick="CheckMCAnswer(49,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;on the
+						hundredth anniversary of the Nobel Peace Prize, itself</li>
+					<li id="Q_49_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_49_1_Btn"
+							onclick="CheckMCAnswer(49,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;on the
+						fifty-fifth anniversary of the United Nations</li>
+					<li id="Q_49_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_49_2_Btn"
+							onclick="CheckMCAnswer(49,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;on the
+						fifty-fifth anniversary of Unicef</li>
+					<li id="Q_49_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+							onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)"
+							onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_49_3_Btn"
+							onclick="CheckMCAnswer(49,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;on the
+						birthday of Alfred Nobel, who instituted the prize</li>
+				</ol>
+			</li>
+		</ol>
+
+
+
+	</div>
+
+	<a href="games.html">
+		<button class="crossword-button"
+			style="width: 100%; background-color:#15A2E6; color: white; border-color: #15A2E6">
+			<h2 style="text-align: center;">
+				<icon class="material-icons">arrow_back</icon> Return to Games
+			</h2>
+		</button>
+	</a>
+	<a href="index.html">
+		<button class="crossword-button"
+			style="width: 100%; background-color:#15A2E6; color: white; border-color: #15A2E6">
+			<h2 style="text-align: center;">
+				<icon class="material-icons">home</icon> Return to Homepage
+			</h2>
+		</button>
+	</a>
+	<br><br>
+
+
+
+	<div class="Feedback" id="FeedbackDiv">
+		<div class="FeedbackText" id="FeedbackContent"></div>
+		<button id="FeedbackOKButton" class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)"
+			onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)"
+			onmouseup="FuncBtnOut(this)" onclick="HideFeedback(); return false;">&nbsp;OK&nbsp;</button>
+	</div>
+
+	<!-- BeginBottomNavButtons -->
+
+
+
+	<!-- EndBottomNavButtons -->
+
+	<!-- BeginSubmissionForm -->
+
+	<!-- EndSubmissionForm -->
+
+</body>
+
+</html>
