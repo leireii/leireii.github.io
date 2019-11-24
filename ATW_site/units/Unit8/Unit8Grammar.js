@@ -30,8 +30,8 @@ function checkAnswer(){
         input4.style.backgroundColor = '#e6ffec'
     }
 
-    if (input5.value != 'Developing') {
-        input5.value = 'Developing'
+    if (input5.value != 'developing') {
+        input5.value = 'developing'
         input5.style.backgroundColor = 'pink'
     } else {
         input5.style.backgroundColor = '#e6ffec'

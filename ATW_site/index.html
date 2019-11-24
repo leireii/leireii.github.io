@@ -3,17 +3,54 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Action Through Words</title>
+    <title>Action through Words</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/units.css">
+
+    <style>
+        #prize {
+            opacity: .50;
+            background-color: #15A2E6;
+            width:150px;
+            height: 50px;
+            position: absolute;
+            top: 50px;
+            right: 0px;
+            color: white;
+            transition: opacity .2s ease;
+        } 
+
+        #prize:hover {
+            opacity: 1;
+            text-decoration: none;
+        }
+    </style>
+
 </head>
 
 <body>
+    <!-- MOBILE NAVIGATION -->
+    <div id="mobile-nav">
+        <a href="/index.html"><img src="https://www.un.org/development/desa/capacity-development/wp-content/uploads/sites/66/2017/10/un-logo-white.png" width="50px">   Action through Words</a>
+        <div id="mobile-dropdown">
+            <button id="mobile-dropdown-btn"><i class="material-icons">dehaze</i></button>
+            <div id="mobile-dropdown-links">
+                <a href="index.html">Home</a>
+                <a href="SiteInfo.html">About</a>
+                <a href="lessons.html">Units</a>
+                <a href="games.html">Games</a>
+                <a href="writerschecklist.html">Writer's Checklist</a>
+                <a href="extralinks.html">Extra Links</a>
+            </div>
+        </div>
+        
+    </div>
 
+    
     <div class="container-fluid">
         <nav class="unit-menu">
             <div class="sidebar-header">
@@ -22,7 +59,7 @@
             </div>
 
             <ul class="list-unstyled components">
-                <p style="color: white; padding: 3px;"><b>Action Through Words</b></p>
+                <p style="color: white; padding: 3px;"><b>Action through Words</b></p>
                 <li>
                     <a href="index.html">Home</a>
                 </li>
@@ -51,40 +88,26 @@
 
         </nav>
 
-
         <div class="unit-content">
             <div class="container" id="home">
                 <img class="" src="https://www.teachdontpreach.ie/wordpress/wp-content/uploads/2011/01/UNlogo.jpg"
-                    width="20%">
+                    width="150px">
                 <br>
-                <h1 style="font-size: 50px;"><b>Action Through Words</b></h1>
-                <h3>Action Through Words helps users expand their knowledge of:</h3>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <i class="material-icons" style="color: #15A2E6; font-size: 125px;">
-                            translate
-                        </i>
-                        <h4><b>The English Language</b></h4>
-                    </div>
-                    <div class="col-sm-6">
-                        <i class="material-icons" style="color: #15A2E6; font-size: 125px;">
-                            language
-                        </i>
-                        <h4><b>The History of the United Nations</b></h4>
-                    </div>
-                </div>
+                <h1 style="font-size: 40px;"><b>Action through Words</b></h1>
+                <h3>Action through Words helps users expand their knowledge of the <br><b>English language</b> and the <b>history of the United Nations.</b></h3>
+                
                 <br><br>
             </div>
 
             <div class="yellowbg">
-                <i class="material-icons" style="font-size: 150px;">
+                <i class="material-icons" style="font-size: 100px;">
                     nature_people
                 </i>
-                <h4>
+                <h5>
                     "While every nation, every person, every living thing on the earth seeks to maintain its survival,
                     the only
                     way to ensure that survival is by learning to coexist with others who are vastly different."
-                </h4>
+                </h5>
                 <br>
                 <h7 style="float: right"><em>Excerpt from Unit 1</em></h7>
                 <br>
@@ -92,14 +115,14 @@
 
 
 
-            <div class="container" id="about">
+            <!-- <div class="container" id="about">
                 <h2>About This Site</h2>
                 <i class="material-icons" style="font-size: 150px;">
                     school
                 </i>
                 <br>
                 <h4>
-                    <b>Action Through Words</b> was originally designed for new UN staff members, especially those
+                    <b>Action through Words</b> was originally designed for new UN staff members, especially those
                     working at
                     duty
                     stations where access to formal language training is limited. It was also designed for people
@@ -116,11 +139,11 @@
                 <br>
                 <a href="SiteInfo.html" style="font-size: 20px;" target="_blank">More about this site...</a>
                 <br><br><br>
-            </div>
+            </div> -->
 
 
 
-            <div class="bluebg">
+            <!-- <div class="bluebg">
                 <h4><b>Winner of the 2004</b></h4>
                 <i class="material-icons" style="color: #15A2E6; font-size: 100px;">
                     grade
@@ -128,7 +151,7 @@
                 <br>
                 <h3><a target="_blank" href="https://www.un.org/webcast/un21awards/">UN21 Award</a></h3>
                 <br>
-            </div>
+            </div> -->
 
 
 
@@ -136,7 +159,7 @@
                 <h2>What to Expect From Each Unit</h2>
                 <div class="row" style="text-align: center;">
                     <div class="col-md-4">
-                        <i class="material-icons" style="color: #15A2E6; font-size: 100px; text-align: justify">
+                        <i class="material-icons" style="color: #15A2E6; font-size: 75px; text-align: justify">
                             info
                         </i>
                         <h3 style="color: #15A2E6">Introduction</h3>
@@ -146,7 +169,7 @@
                         </p>
                     </div>
                     <div class="col-md-4">
-                        <i class="material-icons" style="color: #15A2E6; font-size: 100px; text-align: center">
+                        <i class="material-icons" style="color: #15A2E6; font-size: 75px; text-align: center">
                             library_books
                         </i>
                         <h3 style="color: #15A2E6">Reading</h3>
@@ -157,7 +180,7 @@
                         </p>
                     </div>
                     <div class="col-sm-4">
-                        <i class="material-icons" style="color: #15A2E6; font-size: 100px; text-align: justify">
+                        <i class="material-icons" style="color: #15A2E6; font-size: 75px; text-align: justify">
                             assignment
                         </i>
                         <h3 style="color: #15A2E6">Grammar</h3>
@@ -170,7 +193,7 @@
                 </div>
                 <div class="row" style="margin-top: -30px;">
                     <div class="col-md-6">
-                        <i class="material-icons" style="color: #15A2E6; font-size: 100px; text-align: justify">
+                        <i class="material-icons" style="color: #15A2E6; font-size: 75px; text-align: justify">
                             subject
                         </i>
                         <h3 style="color: #15A2E6">Writing</h3>
@@ -180,7 +203,7 @@
                         </p>
                     </div>
                     <div class="col-md-6">
-                        <i class="material-icons" style="color: #15A2E6; font-size: 100px; text-align: justify">
+                        <i class="material-icons" style="color: #15A2E6; font-size: 75px; text-align: justify">
                             headset_mic
                         </i>
                         <h3 style="color: #15A2E6">Listening</h3>
@@ -203,29 +226,32 @@
 
             <div class="yellowbg">
                 <h3><b>News & Reading</b></h3>
-                <i class="material-icons" style="font-size: 100px;">
+                <i class="material-icons" style="font-size: 75px;">
                     announcement
                 </i>
                 <ul style="text-align: left; width: 500px; margin: 0 auto;">
                     <li>
-                        <h5><a target="_blank" style="color:black" href="UNknownUN.html">UNknown UN</a></h5>
+                        <h5><a style="color:black;text-decoration: underline;" href="UNknownUN.html">UNknown UN</a></h5>
                     </li>
                     <li>
-                        <h5><a target="_blank" style="color: black" href="IntlYearofLanguages.html">International Year of Languages</a></h5>
+                        <h5><a style="color: black;text-decoration: underline;" href="IntlYearofLanguages.html">International Year
+                                of Languages</a></h5>
                     </li>
                 </ul>
             </div>
 
 
 
+            <a id="prize" target="_blank" href="https://www.un.org/webcast/un21awards/">Winner of the 2004 UN21 Award</a>
+
 
 
 
             <div class="top-banner">
                 <div class="row">
-                    <div class="col-sm-6" style="text-align: left; padding-left: 50px;">
+                    <div class="col-sm-6" style=" padding-left: 50px; margin: 0 auto;">
                         <img src="https://www.teachdontpreach.ie/wordpress/wp-content/uploads/2011/01/UNlogo.jpg"
-                            height="100px">
+                            width="30%">
                     </div>
                     <div class="col-sm-6" style="text-align: center">
                         <h1>Action through Words</h1>

@@ -22,14 +22,14 @@ body {
 
 .top-banner {
     padding-right: 20px;
-    background-color: white;
+    background-color: white ;
     width: 100%;
+    height: auto;
 }
 
 .top-banner h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
-    letter-spacing: 3px;
     color: #15A2E6;
 }
 
@@ -128,6 +128,66 @@ ul ul a:hover {
     background-color: rgb(236, 249, 255);
 }
 
+#mobile-nav {
+    display: none;
+    background-color: #15A2E6;
+    height: 50px;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+#mobile-nav a {
+    color: white;
+
+}
+#mobile-nav a:hover {
+    text-decoration: none;
+}
+
+#mobile-dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+#mobile-dropdown-links {
+    top: 50px;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    background-color: #15A2E6;
+    left: 0;
+    text-align: right;
+    transition: height .3s ease;
+}
+#mobile-dropdown-links a{
+    float: none;
+    padding: 5px;
+    display: block;
+}
+#mobile-dropdown-links a:hover {
+    background-color: rgb(4, 107, 158);
+}
+
+#mobile-dropdown:hover #mobile-dropdown-links {
+    height: 205px;
+}
+
+#mobile-dropdown-btn{
+    background-color: #15A2E6;
+    border: none;
+    color: white;
+    padding-top: 3px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;
+    font-size: 20px;
+}
+
 @media only print {
     /* CROSSWORD */
     .crossword-button {
@@ -145,6 +205,9 @@ ul ul a:hover {
 @media only screen and (max-width: 750px) {
     .unit-menu {
         display: none;
+    }
+    #mobile-nav {
+        display: block;
     }
     .unit-content {
         padding: none;
